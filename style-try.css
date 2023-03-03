@@ -1,0 +1,220 @@
+:root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+:root:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 5vmax at var(--cursorX) var(--cursorY),
+    rgba(255, 238, 46) 0%,
+    rgba(26, 26, 64, 0.5) 80%,
+    rgba(26, 26, 64, 0.95) 100%
+  );
+}
+.moon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -100px;
+  width: 200px;
+  height: 200px;
+  background: #c7cbd0;
+  border-radius: 50%;
+  box-shadow: inset 25px 0px 0 0px #9098a1;
+  transition: transform 0.2s ease-in-out;
+  z-index: 11;
+}
+/* MOON */
+.moon:hover {
+  transform: scale(1.2);
+  /* box-shadow:  0px 0px 200px #f7dba7; */
+  -webkit-box-shadow: 0px 0px 105px 66px rgba(255, 238, 46, 0.74);
+  -moz-box-shadow: 0px 0px 105px 66px rgba(255, 238, 46, 0.74);
+  box-shadow: inset -25px 0px 0 0px #9098a1,
+    0px 0px 105px 66px rgba(255, 238, 46, 0.74);
+}
+li {
+  position: absolute;
+  list-style: none;
+  background: #737277;
+  border-radius: 50%;
+}
+li:nth-child(1) {
+  left: 25px;
+  top: 60px;
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 6px -2px 0 0px #414043;
+}
+li:nth-child(2) {
+  left: 150px;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+  z-index: 15;
+}
+li:nth-child(3) {
+  left: 100px;
+  top: 150px;
+  width: 25px;
+  height: 25px;
+  box-shadow: inset 3px -1px 0 0px #414043;
+}
+li:nth-child(4) {
+  left: 50px;
+  top: 150px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+li:nth-child(5) {
+  left: 87.5px;
+  top: 16.66666667px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+li:nth-child(6) {
+  left: 114.28571429px;
+  top: 80px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+}
+li:nth-child(7) {
+  left: 181.81818182px;
+  top: 100px;
+  width: 12.5px;
+  height: 12.5px;
+  box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  z-index: 15;
+}
+/* END MOON */
+
+/* SHOOTING STARS */
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 238, 46, 0.1),
+    0 0 0 8px rgba(255, 238, 46, 0.1), 0 0 20px rgba(255, 238, 46, 1);
+  animation: animate 7s ease-in infinite;
+}
+span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #f7dba7, transparent);
+}
+@keyframes animate {
+  0% {
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1500px);
+    opacity: 0;
+  }
+}
+span:nth-child(1) {
+  top: -20px;
+  right: 0;
+  left: initial;
+  animation-delay: 9s;
+  animation-duration: 5s;
+}
+span:nth-child(2) {
+  top: -20px;
+  right: 80px;
+  left: initial;
+  animation-delay: 10s;
+  animation-duration: 7s;
+}
+span:nth-child(3) {
+  top: -20px;
+  right: 0px;
+  left: initial;
+  animation-delay: 8.75ss;
+  animation-duration: 4.5s;
+}
+span:nth-child(4) {
+  top: -20px;
+  right: 180px;
+  left: initial;
+  animation-delay: 10s;
+  animation-duration: 5s;
+}
+span:nth-child(5) {
+  top: -20px;
+  right: 400px;
+  left: initial;
+  animation-delay: 11s;
+  animation-duration: 4s;
+}
+span:nth-child(6) {
+  top: -20px;
+  right: 600px;
+  left: initial;
+  animation-delay: 11.5s;
+  animation-duration: 3s;
+}
+span:nth-child(7) {
+  top: -20px;
+  right: 0px;
+  left: initial;
+  animation-delay: 10s;
+  animation-duration: 4s;
+}
+span:nth-child(8) {
+  top: -20px;
+  right: 700px;
+  left: initial;
+  animation-delay: 7s;
+  animation-duration: 5s;
+}
+span:nth-child(9) {
+  top: -20px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 8s;
+  animation-duration: 8s;
+}
+span:nth-child(10) {
+  top: -20px;
+  right: 1000px;
+  left: initial;
+  animation-delay: 8s;
+  animation-duration: 6s;
+}
+span:nth-child(11) {
+  top: -20px;
+  right: 1200px;
+  left: initial;
+  animation-delay: 10s;
+  animation-duration: 3s;
+}
+span:nth-child(12) {
+  top: -20px;
+  right: 1500px;
+  left: initial;
+  animation-delay: 7s;
+  animation-duration: 6s;
+}
+/* END SHOOTING STAR */

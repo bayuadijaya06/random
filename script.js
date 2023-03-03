@@ -50,7 +50,7 @@ $(document).ready(function () {
     this.obj = document.createElement("div");
     this.obj.classList.add("box");
     this.obj.style.top = window.innerHeight * Math.random() + "px";
-    this.obj.style.left = window.innerWidth * Math.random() + "px";
+    this.obj.style.left = window.innerWidth * Math.random() * 3 + "px";
     this.size = Math.floor(5 * Math.random()) + 1;
     this.obj.style.height = this.size + "px";
     this.obj.style.width = this.size + "px";
@@ -58,7 +58,7 @@ $(document).ready(function () {
     document.body.appendChild(this.obj);
   }
   var dot = [];
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 600; i++) {
     dot.push(new freshDot());
   }
   /*
